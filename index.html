@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Roofing & Storm Restoration | USA, UK & Canada</title>
+    <title>Apex Roofing & Storm Restoration | Elite Ladder Assist & Insurance Claims</title>
     <style>
         * {
             margin: 0;
@@ -46,30 +46,31 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(5, 7, 12, 0.75);
+            background: rgba(5, 7, 12, 0.8);
             z-index: -1;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
         }
 
         .badge {
             background: rgba(255, 140, 0, 0.2);
             color: #ffa500;
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 20px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             border: 1px solid rgba(255, 165, 0, 0.4);
             display: inline-block;
+            margin-bottom: 15px;
         }
 
         .hero-content h1 {
             font-size: 48px;
-            margin: 20px 0;
+            margin: 15px 0;
             font-weight: 800;
             line-height: 1.2;
         }
@@ -78,6 +79,7 @@
             font-size: 18px;
             color: #cbd5e1;
             margin-bottom: 30px;
+            line-height: 1.6;
         }
 
         .btn-primary {
@@ -137,7 +139,27 @@
             color: #94a3b8;
             font-size: 16px;
             line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .features-list {
+            list-style: none;
             margin-bottom: 30px;
+        }
+
+        .features-list li {
+            color: #cbd5e1;
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-list li::before {
+            content: "✔";
+            color: #ffa500;
+            font-weight: bold;
         }
 
         .damage-visual-side {
@@ -183,7 +205,7 @@
             height: 6px;
         }
 
-        /* Responsive Design for Mobile & Tablet */
+        /* Responsive Design */
         @media (max-width: 968px) {
             .damage-container {
                 flex-direction: column;
@@ -191,6 +213,9 @@
             }
             .damage-text-side {
                 text-align: center;
+            }
+            .features-list li {
+                justify-content: center;
             }
             .hero-content h1 {
                 font-size: 36px;
@@ -203,7 +228,7 @@
 </head>
 <body>
 
-    <!-- Hero Section with Loop Video Background -->
+    <!-- Hero Section with Background Loop Video -->
     <section class="hero-section">
         <video autoplay muted loop playsinline class="bg-video">
             <source src="roofing loop.mp4" type="video/mp4">
@@ -213,29 +238,36 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-            <span class="badge">LICENSED & INSURED • 24/7 STORM RESPONSE</span>
-            <h1>Protect Your Home Before the Next Storm Strikes</h1>
-            <p>Severe weather silently destroys your roof. Get a 100% free expert damage inspection and hassle-free insurance claim assistance.</p>
+            <span class="badge">EXPERT LADDER ASSIST & STORM RESTORATION</span>
+            <h1>Protect Your Home Before the Next Major Storm Strikes</h1>
+            <p>Severe wind and hail silently destroy your roof structure. We provide professional damage inspection, accurate ladder assist documentation, and full insurance claim support.</p>
             
             <div class="cta-box">
                 <a href="#interactive-section" class="btn-primary">Claim Free Inspection</a>
-                <span class="sub-text">⚡ Trusted in USA, UK & Canada</span>
+                <span class="sub-text">⚡ Trusted Storm Damage Experts across USA, UK & Canada</span>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Section with Powerful Dialog on Left & Video/Slider on Right -->
+    <!-- Interactive Section: Left Powerful Dialog & Right Scrubber Video -->
     <section id="interactive-section" class="damage-section">
         <div class="damage-container">
-            <!-- বাম পাশের শক্তিশালী ডায়লগ ও টেক্সট -->
+            <!-- Bam Pasher Powerful Dialog & Content (Inspired by Patriot Claims) -->
             <div class="damage-text-side">
                 <span class="badge">STORM DAMAGE ANALYSIS</span>
                 <h2>See How Hidden Storm Damage Destroys Your Roof</h2>
-                <p>Invisible wind and hail impacts cause silent leaks, rotting wood, and expensive structural failures. Drag or scroll the slider to instantly reveal the exact impact and protect your home today.</p>
-                <a href="#contact" class="btn-primary">Get Expert Inspection</a>
+                <p>Invisible impacts cause leaks, rotting wood, and expensive structural failures. Use our interactive slider to instantly reveal the exact impact and protect your investment.</p>
+                
+                <ul class="features-list">
+                    <li>Professional Ladder Assist & Detailed Inspection</li>
+                    <li>Insurance Claim Documentation & Evidence Support</li>
+                    <li>Licensed, Insured & 24/7 Emergency Response</li>
+                </ul>
+
+                <a href="#contact" class="btn-primary">Get Expert Inspection Now</a>
             </div>
 
-            <!-- ডান পাশের ভিডিও এবং স্লাইডার সেকশন -->
+            <!-- Dan Pasher Video & Interactive Slider -->
             <div class="damage-visual-side">
                 <div class="video-container">
                     <video id="damageVideo" muted playsinline preload="auto">
