@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Roofing & Storm Restoration | USA, UK & Canada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 7, 12, 0.75);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .badge {
+            background: rgba(255, 140, 0, 0.2);
+            color: #ffa500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 165, 0, 0.4);
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin: 20px 0;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff8c00, #ff4500);
+            color: #fff;
+            padding: 15px 35px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 25px rgba(255, 69, 0, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 69, 0, 0.6);
+        }
+
+        .sub-text {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        /* Damage Section Styles */
+        .damage-section {
+            padding: 100px 20px;
+            background: #0f172a;
+            text-align: center;
+        }
+
+        .damage-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .damage-section p {
+            color: #94a3b8;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .video-container {
+            max-width: 420px;
+            margin: 0 auto 20px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            border: 2px solid rgba(255,255,255,0.1);
+            background: #000;
+        }
+
+        #damageVideo {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        .slider-wrapper {
+            max-width: 420px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .slider-label {
+            font-size: 12px;
+            color: #ffa500;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        #videoSlider {
+            flex-grow: 1;
+            accent-color: #ff8c00;
+            cursor: pointer;
+            height: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section with Loop Video Background -->
+    <section class="hero-section">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="roofing loop.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <span class="badge">LICENSED & INSURED • 24/7 STORM RESPONSE</span>
+            <h1>Protect Your Home Before the Next Storm Strikes</h1>
+            <p>Severe weather silently destroys your roof. Get a 100% free expert damage inspection and hassle-free insurance claim assistance.</p>
+            
+            <div class="cta-box">
+                <a href="#interactive-section" class="btn-primary">Claim Free Inspection</a>
+                <span class="sub-text">⚡ Trusted in USA, UK & Canada</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Section with Correct Slide Video Name -->
+    <section id="interactive-section" class="damage-section">
+        <div class="container">
+            <h2>See How Hidden Storm Damage Destroys Your Roof</h2>
+            <p>Drag or scroll the slider below to reveal the impact and how our elite restoration process protects your home.</p>
+            
+            <div class="video-container">
+                <video id="damageVideo" muted playsinline preload="auto">
+                    <source src="roofing after slide.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Custom Range Slider to Control Video Progress -->
+            <div class="slider-wrapper">
+                <span class="slider-label">Normal Roof</span>
+                <input type="range" id="videoSlider" min="0" max="100" value="0" step="0.1">
+                <span class="slider-label">Storm Impact</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const damageVideo = document.getElementById("damageVideo");
+        const videoSlider = document.getElementById("videoSlider");
+
+        // Ensure metadata is loaded to get accurate video duration
+        damageVideo.addEventListener("loadedmetadata", () => {
+            videoSlider.max = damageVideo.duration;
+        });
+
+        // Update video time when user drags the slider
+        videoSlider.addEventListener("input", () => {
+            damageVideo.currentTime = videoSlider.value;
+        });
+
+        // Sync slider position as the video scrubs
+        damageVideo.addEventListener("timeupdate", () => {
+            videoSlider.value = damageVideo.currentTime;
+        });
+    </script>
+</body>
+</html>
