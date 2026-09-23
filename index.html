@@ -64,6 +64,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             border: 1px solid rgba(255, 165, 0, 0.4);
+            display: inline-block;
         }
 
         .hero-content h1 {
@@ -104,27 +105,48 @@
             color: #94a3b8;
         }
 
-        /* Damage Section Styles */
+        /* Damage Section Styles (PC Side-by-Side Grid Layout) */
         .damage-section {
-            padding: 100px 20px;
+            padding: 100px 40px;
             background: #0f172a;
-            text-align: center;
         }
 
-        .damage-section h2 {
-            font-size: 36px;
-            margin-bottom: 10px;
+        .damage-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
         }
 
-        .damage-section p {
+        .damage-text-side {
+            flex: 1;
+            text-align: left;
+        }
+
+        .damage-text-side h2 {
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 20px 0;
+            color: #ffffff;
+        }
+
+        .damage-text-side p {
             color: #94a3b8;
-            margin-bottom: 40px;
             font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .damage-visual-side {
+            flex: 1;
+            width: 100%;
         }
 
         .video-container {
-            max-width: 420px;
-            margin: 0 auto 20px auto;
+            width: 100%;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.6);
@@ -139,8 +161,8 @@
         }
 
         .slider-wrapper {
-            max-width: 420px;
-            margin: 0 auto;
+            width: 100%;
+            margin-top: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -148,7 +170,7 @@
         }
 
         .slider-label {
-            font-size: 12px;
+            font-size: 13px;
             color: #ffa500;
             font-weight: 600;
             text-transform: uppercase;
@@ -159,6 +181,23 @@
             accent-color: #ff8c00;
             cursor: pointer;
             height: 6px;
+        }
+
+        /* Responsive Design for Mobile & Tablet */
+        @media (max-width: 968px) {
+            .damage-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .damage-text-side {
+                text-align: center;
+            }
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            .damage-section {
+                padding: 60px 20px;
+            }
         }
     </style>
 </head>
@@ -185,24 +224,32 @@
         </div>
     </section>
 
-    <!-- Interactive Section with Correct Slide Video Name -->
+    <!-- Interactive Section with Powerful Dialog on Left & Video/Slider on Right -->
     <section id="interactive-section" class="damage-section">
-        <div class="container">
-            <h2>See How Hidden Storm Damage Destroys Your Roof</h2>
-            <p>Drag or scroll the slider below to reveal the impact and how our elite restoration process protects your home.</p>
-            
-            <div class="video-container">
-                <video id="damageVideo" muted playsinline preload="auto">
-                    <source src="roofing after slide.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+        <div class="damage-container">
+            <!-- বাম পাশের শক্তিশালী ডায়লগ ও টেক্সট -->
+            <div class="damage-text-side">
+                <span class="badge">STORM DAMAGE ANALYSIS</span>
+                <h2>See How Hidden Storm Damage Destroys Your Roof</h2>
+                <p>Invisible wind and hail impacts cause silent leaks, rotting wood, and expensive structural failures. Drag or scroll the slider to instantly reveal the exact impact and protect your home today.</p>
+                <a href="#contact" class="btn-primary">Get Expert Inspection</a>
             </div>
 
-            <!-- Custom Range Slider to Control Video Progress -->
-            <div class="slider-wrapper">
-                <span class="slider-label">Normal Roof</span>
-                <input type="range" id="videoSlider" min="0" max="100" value="0" step="0.1">
-                <span class="slider-label">Storm Impact</span>
+            <!-- ডান পাশের ভিডিও এবং স্লাইডার সেকশন -->
+            <div class="damage-visual-side">
+                <div class="video-container">
+                    <video id="damageVideo" muted playsinline preload="auto">
+                        <source src="roofing after slide.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Custom Range Slider to Control Video Progress -->
+                <div class="slider-wrapper">
+                    <span class="slider-label">Normal Roof</span>
+                    <input type="range" id="videoSlider" min="0" max="100" value="0" step="0.1">
+                    <span class="slider-label">Storm Impact</span>
+                </div>
             </div>
         </div>
     </section>
